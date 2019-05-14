@@ -56,12 +56,12 @@ xena_dtypes = [
     'htseq_counts',  # HTSeq - Counts
     'htseq_fpkm',   # HTSeq - FPKM
     'htseq_fpkm-uq',  # HTSeq - FPKM-UQ
-    'methylation450',  # Illumina Human Methylation 450 
+    # 'methylation450',  # Illumina Human Methylation 450 
 ]
 
 
 # testing code starts here
-projects = list(GDC_XENA_COHORT.keys())[4]
+projects = list(GDC_XENA_COHORT.keys())[5]
 for xena_dtype in xena_dtypes:
     try:
         start = time.time()
