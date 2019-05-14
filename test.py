@@ -66,13 +66,13 @@ for xena_dtype in xena_dtypes:
     try:
         start = time.time()
         dataset = xena_dataset.GDCOmicset(
-            projects=list(GDC_XENA_COHORT.keys())[1],
+            projects=list(GDC_XENA_COHORT.keys())[2],
             root_dir=r'./test',
             xena_dtype=xena_dtype
         )
         dataset.download().transform().metadata()
         print(time.time()-start)
-        print(Fore.GREEN + "Pipeline suceed for {}".format(xena_dtype))
+        print(Fore.GREEN + "Pipeline succeed for {}".format(xena_dtype))
         print(Style.RESET_ALL)
     except Exception as e:
         print(Fore.RED + str(e))
