@@ -25,5 +25,6 @@ for xena_dtype in xena_dtypes:
                             xena_dtype=xena_dtype)
         dataset.download().transform().metadata()
         print(time.time()-start)
-    except:
-        print("Pipeline failed for {xena_dtype}")
+    except Exception as e:
+        print(e)
+        print("Pipeline failed for {}".format(xena_dtype))
