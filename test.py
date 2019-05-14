@@ -61,7 +61,7 @@ xena_dtypes = [
 
 
 # testing code starts here
-projects = list(GDC_XENA_COHORT.keys())[7]  # TCGA-THCA
+projects = list(GDC_XENA_COHORT.keys())[8]  # TCGA-SKCM
 for xena_dtype in xena_dtypes:
     try:
         start = time.time()
