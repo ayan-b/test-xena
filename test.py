@@ -61,7 +61,11 @@ xena_dtypes = [
 
 
 # testing code starts here
-projects = list(GDC_XENA_COHORT.keys())[8]  # TCGA-SKCM
+import sys
+if sys.version_info[0] < 3:
+    projects = list(GDC_XENA_COHORT.keys())[9]  # TCGA-OV
+else:
+    projects = list(GDC_XENA_COHORT.keys())[10]  # TCGA-STAD
 for xena_dtype in xena_dtypes:
     try:
         start = time.time()
