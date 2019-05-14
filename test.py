@@ -4,7 +4,7 @@ from xena_gdc_etl import xena_dataset
 
 
 xena_dtypes = [
-    'masked_cnv',  # Masked Copy Number Segment 
+    # 'masked_cnv',  # Masked Copy Number Segment 
     # 'methylation450',  # Illumina Human Methylation 450 
     'mirna',  # miRNA Expression Quantification
     'muse_snv',  # MuSE Variant Aggregation and Masking
