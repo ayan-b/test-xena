@@ -48,7 +48,6 @@ GDC_XENA_COHORT = {
 
 xena_dtypes = [
     'masked_cnv',  # Masked Copy Number Segment 
-    # 'methylation450',  # Illumina Human Methylation 450 
     'mirna',  # miRNA Expression Quantification
     'muse_snv',  # MuSE Variant Aggregation and Masking
     'mutect2_snv',  # MuTect2 Variant Aggregation and Masking
@@ -57,6 +56,7 @@ xena_dtypes = [
     'htseq_counts',  # HTSeq - Counts
     'htseq_fpkm',   # HTSeq - FPKM
     'htseq_fpkm-uq',  # HTSeq - FPKM-UQ
+    'methylation450',  # Illumina Human Methylation 450 
 ]
 
 
