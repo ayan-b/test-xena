@@ -65,13 +65,13 @@ xena_dtypes = [
 # testing code starts here
 import sys
 if sys.version_info[0] < 3:
-    projects = GDC_XENA_COHORT[9]  # TCGA-OV
+    projects = GDC_XENA_COHORT[14]  # TCGA-LIHC
 elif sys.version_info[0] == 3 and sys.version_info[1] == 7:
-    projects = GDC_XENA_COHORT[11]  # TCGA-COAD
+    projects = GDC_XENA_COHORT[15]  # TCGA-CESC
 elif sys.version_info[0] == 3 and sys.version_info[1] == 6:
-    projects = GDC_XENA_COHORT[12]  # TCGA-BLCA
+    projects = GDC_XENA_COHORT[16]  # TCGA-BLCA
 elif sys.version_info[0] == 3 and sys.version_info[1] == 5:
-    projects = GDC_XENA_COHORT[13]  # TCGA-GBM
+    projects = GDC_XENA_COHORT[17]  # TCGA-KIRP
 for xena_dtype in xena_dtypes:
     try:
         start = time.time()
