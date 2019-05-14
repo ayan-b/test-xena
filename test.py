@@ -26,14 +26,14 @@ GDC_XENA_COHORT = [
     'TCGA-COAD', #
     'TCGA-BLCA', #
     'TCGA-GBM', #
-    'TCGA-LIHC',
-    'TCGA-KIRC',
-    'TCGA-CESC',
-    'TCGA-KIRP',
-    'TCGA-SARC',
-    'TCGA-ESCA',
-    'TCGA-PAAD',
-    'TCGA-PCPG',
+    'TCGA-LIHC', #
+    'TCGA-KIRC', #
+    'TCGA-CESC', #
+    'TCGA-KIRP', #
+    'TCGA-SARC', #
+    'TCGA-ESCA', #
+    'TCGA-PAAD', #
+    'TCGA-PCPG', #
     'TCGA-READ',
     'TCGA-TGCT',
     'TCGA-LAML',
@@ -65,13 +65,13 @@ xena_dtypes = [
 # testing code starts here
 import sys
 if sys.version_info[0] < 3:
-    projects = GDC_XENA_COHORT[14]  # TCGA-LIHC
+    projects = GDC_XENA_COHORT[18]  # TCGA-SARC
 elif sys.version_info[0] == 3 and sys.version_info[1] == 7:
-    projects = GDC_XENA_COHORT[15]  # TCGA-CESC
+    projects = GDC_XENA_COHORT[19]  # TCGA-ESCA
 elif sys.version_info[0] == 3 and sys.version_info[1] == 6:
-    projects = GDC_XENA_COHORT[16]  # TCGA-BLCA
+    projects = GDC_XENA_COHORT[20]  # TCGA-PAAD
 elif sys.version_info[0] == 3 and sys.version_info[1] == 5:
-    projects = GDC_XENA_COHORT[17]  # TCGA-KIRP
+    projects = GDC_XENA_COHORT[21]  # TCGA-PCPG
 for xena_dtype in xena_dtypes:
     try:
         start = time.time()
