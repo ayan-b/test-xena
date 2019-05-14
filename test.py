@@ -43,11 +43,11 @@ GDC_XENA_COHORT = [
     'TCGA-UVM', #
     'TCGA-KICH', #
     'TCGA-UCS', #
-    'TCGA-CHOL',
-    'TCGA-DLBC',
+    'TCGA-CHOL', #
+    'TCGA-DLBC', #
 ]
 
-TARGET_DATA = {
+TARGET_DATA = [
     "TARGET-NBL",
     "TARGET-AML",
     "TARGET-WT",
@@ -55,7 +55,7 @@ TARGET_DATA = {
     "TARGET-ALL-P3",
     "TARGET-RT",
     "TARGET-CCSK",
-}
+]
 
 xena_dtypes = [
     'masked_cnv',  # Masked Copy Number Segment 
@@ -73,13 +73,13 @@ xena_dtypes = [
 
 import sys
 if sys.version_info[0] < 3:
-    projects = GDC_XENA_COHORT[26]  # TCGA-ACC
+    projects = GDC_XENA_COHORT[31]  # TCGA-CHOL
 elif sys.version_info[0] == 3 and sys.version_info[1] == 7:
-    projects = GDC_XENA_COHORT[27]  # TCGA-MESO
+    projects = GDC_XENA_COHORT[27]  # TCGA-DLBC
 elif sys.version_info[0] == 3 and sys.version_info[1] == 6:
-    projects = GDC_XENA_COHORT[28]  # TCGA-UVM
+    projects = TARGET_DATA[0]  # TARGET-NBL
 elif sys.version_info[0] == 3 and sys.version_info[1] == 5:
-    projects = GDC_XENA_COHORT[30]  # TCGA-UCS
+    projects = TARGET_DATA[1]  # TARGET-AML
 
 # testing code starts here
 for xena_dtype in xena_dtypes:
