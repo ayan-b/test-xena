@@ -1,0 +1,13 @@
+sudo: required
+language: python
+python:
+  - 3.6
+  - 2.7
+notifications:
+  email: false
+
+script:
+  - python test.py
+
+before_install:
+  - pip install git+https://github.com/yunhailuo/xena-GDC-ETL
