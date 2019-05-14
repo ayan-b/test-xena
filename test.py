@@ -61,18 +61,18 @@ xena_dtypes = [
 
 
 # testing code starts here
-print('A python module of Xena specific importing pipeline for GDC data.')
+projects = list(GDC_XENA_COHORT.keys())[3]
 for xena_dtype in xena_dtypes:
     try:
         start = time.time()
         dataset = xena_dataset.GDCOmicset(
-            projects=list(GDC_XENA_COHORT.keys())[2],
+            projects=projects,
             root_dir=r'./test',
             xena_dtype=xena_dtype
         )
         dataset.download().transform().metadata()
-        print(time.time()-start)
-        print(Fore.GREEN + "Pipeline succeed for {}".format(xena_dtype))
+        print("Time taken:", (time.time()-start)//60, "min", (time.time()-start)%60, "sec")
+        print(Fore.GREEN + "Pipeline succeed for {} in {} project".format(xena_dtype, projects))
         print(Style.RESET_ALL)
     except Exception as e:
         print(Fore.RED + str(e))
