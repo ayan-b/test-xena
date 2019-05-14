@@ -48,12 +48,12 @@ GDC_XENA_COHORT = [
 ]
 
 TARGET_DATA = [
-    "TARGET-NBL",
-    "TARGET-AML",
-    "TARGET-WT",
-    "TARGET-OS",
-    "TARGET-ALL-P3",
-    "TARGET-RT",
+    "TARGET-NBL", #
+    "TARGET-AML", #
+    "TARGET-WT", #
+    "TARGET-OS", #
+    "TARGET-ALL-P3", #
+    "TARGET-RT", #
     "TARGET-CCSK",
 ]
 
@@ -73,13 +73,13 @@ xena_dtypes = [
 
 import sys
 if sys.version_info[0] < 3:
-    projects = GDC_XENA_COHORT[31]  # TCGA-CHOL
+    projects = TARGET_DATA[2]  # TARGET-WT
 elif sys.version_info[0] == 3 and sys.version_info[1] == 7:
-    projects = GDC_XENA_COHORT[27]  # TCGA-DLBC
+    projects = TARGET_DATA[3]  # TAGET-OS
 elif sys.version_info[0] == 3 and sys.version_info[1] == 6:
-    projects = TARGET_DATA[0]  # TARGET-NBL
+    projects = TARGET_DATA[4]  # TARGET-ALL-P3
 elif sys.version_info[0] == 3 and sys.version_info[1] == 5:
-    projects = TARGET_DATA[1]  # TARGET-AML
+    projects = TARGET_DATA[5]  # TARGET-RT
 
 # testing code starts here
 for xena_dtype in xena_dtypes:
