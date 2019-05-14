@@ -54,7 +54,7 @@ TARGET_DATA = [
     "TARGET-OS", #
     "TARGET-ALL-P3", #
     "TARGET-RT", #
-    "TARGET-CCSK",
+    "TARGET-CCSK", #
 ]
 
 xena_dtypes = [
@@ -73,11 +73,11 @@ xena_dtypes = [
 
 import sys
 if sys.version_info[0] < 3:
-    projects = TARGET_DATA[2]  # TARGET-WT
+    projects = TARGET_DATA[6]  # TARGET-CCSK
 elif sys.version_info[0] == 3 and sys.version_info[1] == 7:
-    projects = TARGET_DATA[3]  # TAGET-OS
+    projects = GDC_XENA_COHORT[-1]  # TCGA-DLBC
 elif sys.version_info[0] == 3 and sys.version_info[1] == 6:
-    projects = TARGET_DATA[4]  # TARGET-ALL-P3
+    projects = TARGET_DATA[3]  # TARGET-OS
 elif sys.version_info[0] == 3 and sys.version_info[1] == 5:
     projects = TARGET_DATA[5]  # TARGET-RT
 
@@ -96,5 +96,5 @@ for xena_dtype in xena_dtypes:
         print(Style.RESET_ALL)
     except Exception as e:
         print(Fore.RED + str(e))
-        print(Fore.RED + "Pipeline failed for {}".format(xena_dtype))
+        print(Fore.RED + "Pipeline failed for {} in {} project".format(xena_dtype, projects))
         print(Style.RESET_ALL)
