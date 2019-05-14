@@ -10,4 +10,5 @@ script:
   - python test.py
 
 before_install:
+  - pip install colorama
   - pip install git+https://github.com/yunhailuo/xena-GDC-ETL
