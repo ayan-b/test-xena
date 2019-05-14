@@ -61,7 +61,7 @@ xena_dtypes = [
 
 
 # testing code starts here
-projects = list(GDC_XENA_COHORT.keys())[3]
+projects = list(GDC_XENA_COHORT.keys())[4]
 for xena_dtype in xena_dtypes:
     try:
         start = time.time()
@@ -71,7 +71,7 @@ for xena_dtype in xena_dtypes:
             xena_dtype=xena_dtype
         )
         dataset.download().transform().metadata()
-        print("Time taken:", (time.time()-start)//60, "min", (time.time()-start)%60, "sec")
+        print("Time taken:", int((time.time()-start)//60), "min", round((time.time()-start)%60), "sec")
         print(Fore.GREEN + "Pipeline succeed for {} in {} project".format(xena_dtype, projects))
         print(Style.RESET_ALL)
     except Exception as e:
