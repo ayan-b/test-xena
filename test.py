@@ -61,7 +61,7 @@ xena_dtypes = [
 
 
 # testing code starts here
-projects = list(GDC_XENA_COHORT.keys())[5]
+projects = list(GDC_XENA_COHORT.keys())[6]
 for xena_dtype in xena_dtypes:
     try:
         start = time.time()
