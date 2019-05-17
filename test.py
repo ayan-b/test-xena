@@ -67,34 +67,38 @@ xena_dtypes = [
     'htseq_counts',  # HTSeq - Counts
     'htseq_fpkm',   # HTSeq - FPKM
     'htseq_fpkm-uq',  # HTSeq - FPKM-UQ
-    # 'methylation450',  # Illumina Human Methylation 450 
+    'methylation450',  # Illumina Human Methylation 450 
 ]
 
 
-import sys
-if sys.version_info[0] < 3:
-    projects = TARGET_DATA[6]  # TARGET-CCSK
-elif sys.version_info[0] == 3 and sys.version_info[1] == 7:
-    projects = GDC_XENA_COHORT[-1]  # TCGA-DLBC
-elif sys.version_info[0] == 3 and sys.version_info[1] == 6:
-    projects = TARGET_DATA[3]  # TARGET-OS
-elif sys.version_info[0] == 3 and sys.version_info[1] == 5:
-    projects = TARGET_DATA[5]  # TARGET-RT
+# import sys
+# if sys.version_info[0] < 3:
+#     projects = TARGET_DATA[6]  # TARGET-CCSK
+# elif sys.version_info[0] == 3 and sys.version_info[1] == 7:
+#     projects = GDC_XENA_COHORT[-1]  # TCGA-DLBC
+# elif sys.version_info[0] == 3 and sys.version_info[1] == 6:
+#     projects = TARGET_DATA[3]  # TARGET-OS
+# elif sys.version_info[0] == 3 and sys.version_info[1] == 5:
+#     projects = TARGET_DATA[5]  # TARGET-RT
+
+projects = "TCGA-BRCA"
+
+xena_dtypes = ["muse_snv"]
 
 # testing code starts here
 for xena_dtype in xena_dtypes:
     try:
         start = time.time()
-        dataset = xena_dataset.GDCOmicset(
-            projects=projects,
-            root_dir=r'./test',
-            xena_dtype=xena_dtype
+        dataset = xena_dataset.GDCPhenoset(
+            projects="TCGA-BRCA",
+            root_dir=r'.',
+            xena_dtype="clinical",
         )
         dataset.download().transform().metadata()
-        print("Time taken:", int((time.time()-start)//60), "min", round((time.time()-start)%60), "sec")
-        print(Fore.GREEN + "Pipeline succeed for {} in {} project".format(xena_dtype, projects))
-        print(Style.RESET_ALL)
+        # print("Time taken:", int((time.time()-start)//60), "min", round((time.time()-start)%60), "sec")
+        # print(Fore.GREEN + "Pipeline succeed for {} in {} project".format(xena_dtype, projects))
+        # print(Style.RESET_ALL)
     except Exception as e:
-        print(Fore.RED + str(e))
+        print(e)
         print(Fore.RED + "Pipeline failed for {} in {} project".format(xena_dtype, projects))
         print(Style.RESET_ALL)
