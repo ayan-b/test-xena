@@ -1,0 +1,9 @@
+{"cohort":"GDC TCGA Breast Cancer (BRCA)",
+ "url":"https://docs.gdc.cancer.gov/Data/Release_Notes/Data_Release_Notes/#data-release-160, https://api.gdc.cancer.gov/data/",
+ "dataSubType":"phenotype",
+ "dataProducer":"Genomic Data Commons",
+ "label":"Phenotype",
+ "type":"clinicalMatrix",
+ "wrangler":"Xena GDC ETL script",
+ "version":"05-17-2019"
+}
