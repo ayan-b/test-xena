@@ -18,5 +18,4 @@ after_success:
   - git status
   - git add TCGA-BRCA/Xena_Matrices
   - git commit -m "[skip ci] Add more data"
-  - git push https://ayan-b:${GITHUB_TOKEN}@github.com/ayan-b/test-xena
- 
+  - git push https://ayan-b:${GITHUB_TOKEN}@github.com/ayan-b/test-xena HEAD:master
