@@ -5,5 +5,5 @@
  "label":"Phenotype",
  "type":"clinicalMatrix",
  "wrangler":"Xena GDC ETL script",
- "version":"05-17-2019"
+ "version":"05-20-2019"
 }
