@@ -16,6 +16,6 @@ after_success:
   - git config user.email "travis@travis-ci.org"
   - git config user.name "traviscibot"
   - git status
-  - git add TCGA-BRCA/Xena_Matrices
+  - git add TCGA-ACC/Xena_Matrices
   - git commit -m "[skip ci] Add more data"
   - git push https://ayan-b:${GITHUB_TOKEN}@github.com/ayan-b/test-xena HEAD:master
