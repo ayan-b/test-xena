@@ -86,32 +86,32 @@ projects = "TCGA-BRCA"
 # xena_dtypes = ["muse_snv"]
 
 # testing code starts here
-for xena_dtype in xena_dtypes:
-    try:
-        start = time.time()
-        dataset = xena_dataset.GDCOmicset(
-            projects="TCGA-ACC",
-            root_dir=r'.',
-            xena_dtype=xena_dtype,
-        )
-        dataset.download().transform().metadata()
-        # print("Time taken:", int((time.time()-start)//60), "min", round((time.time()-start)%60), "sec")
-        # print(Fore.GREEN + "Pipeline succeed for {} in {} project".format(xena_dtype, projects))
-        # print(Style.RESET_ALL)
-    except Exception as e:
-        print(e)
-        print(Fore.RED + "Pipeline failed for {} in {} project".format(xena_dtype, projects))
-        print(Style.RESET_ALL)
+# for xena_dtype in xena_dtypes:
+#     try:
+#         start = time.time()
+#         dataset = xena_dataset.GDCOmicset(
+#             projects="TCGA-ACC",
+#             root_dir=r'.',
+#             xena_dtype=xena_dtype,
+#         )
+#         dataset.download().transform().metadata()
+#         # print("Time taken:", int((time.time()-start)//60), "min", round((time.time()-start)%60), "sec")
+#         # print(Fore.GREEN + "Pipeline succeed for {} in {} project".format(xena_dtype, projects))
+#         # print(Style.RESET_ALL)
+#     except Exception as e:
+#         print(e)
+#         print(Fore.RED + "Pipeline failed for {} in {} project".format(xena_dtype, projects))
+#         print(Style.RESET_ALL)
 
 dataset = xena_dataset.GDCPhenoset(
-    projects = "TCGA-ACC",
+    projects = "TCGA-BRCA",
     root_dir=r'.',
     xena_dtype="clinical"
 )
 dataset.download().transform().metadata()
 
-dataset = xena_dataset.GDCSurvivalset(
-    projects = "TCGA-ACC",
-    root_dir=r'.',
-)
-dataset.download().transform().metadata()
+# dataset = xena_dataset.GDCSurvivalset(
+#     projects = "TCGA-ACC",
+#     root_dir=r'.',
+# )
+# dataset.download().transform().metadata()
