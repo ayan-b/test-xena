@@ -104,9 +104,8 @@ projects = "TCGA-BRCA"
 #         print(Style.RESET_ALL)
 
 dataset = xena_dataset.GDCPhenoset(
-    projects = "TCGA-BRCA",
+    projects = "TCGA-ACC",
     root_dir=r'.',
-    xena_dtype="clinical"
 )
 dataset.download().transform().metadata()
 
